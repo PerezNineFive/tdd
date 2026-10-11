@@ -123,7 +123,12 @@ img{max-width:100%}
 @media (min-width:1001px){
   .hero{min-height:760px}
   .hero-grid{grid-template-columns:minmax(0,1fr)}
-  .hero-copy{position:relative;z-index:2;max-width:calc(60vw - 120px - max(var(--gut),(100vw - 1260px)/2 + var(--gut)))}
+  /* the copy column shares the nav's left gutter so logo, headline and nav line up on one edge at every width */
+  .hero .wrap{max-width:none;padding-inline:var(--gut)}
+  .hero-copy{position:relative;z-index:2;width:min(620px,calc(60vw - var(--gut) - 110px))}
+  .hero .logo{width:100%;margin-left:0}
+  .meta{margin-bottom:28px}
+  .hero h1{font-size:clamp(40px,3.8vw,60px)}
   .tower-fx{left:17%;height:80%}
   .poster{position:absolute;top:0;right:0;bottom:0;width:40vw;max-width:none;aspect-ratio:auto;z-index:0}
   .armed .poster.rv:not(.in){transform:none}
@@ -486,13 +491,14 @@ footer ul a:hover{color:var(--gold)}
       <h2 class="h rv">The designer who <em>broke out</em> of the machine.</h2>
       <p class="quote rv">"I spent over a decade building design systems inside a public utility, where getting it wrong has real consequences."</p>
       <p>I'm <strong>Tony</strong>. Philadelphia-born, with twelve years of institutional design thinking now aimed at brands that want to <strong>actually mean something</strong>.</p>
-      <p>I also hold a <strong>master's degree in Human Factors Psychology</strong>, the study of how people perceive, pay attention, remember and make decisions. It shapes every brand I build. I design marks that register at a glance, systems that stay easy to read under real-world conditions, and messaging that cuts down the mental work it takes to choose you. Instead of guessing what will land, I design around how people actually see and decide.</p>
+      <p>I hold a <strong>bachelor's degree in Multimedia Design</strong> and a <strong>master's degree in Human Factors Psychology</strong>. Multimedia design gave me the craft: type, motion, interface and image working as one system. Human factors psychology is the study of how people perceive, pay attention, remember and make decisions, and it shapes every brand I build. I design marks that register at a glance, systems that stay easy to read under real-world conditions, and messaging that cuts down the mental work it takes to choose you. Instead of guessing what will land, I design around how people actually see and decide.</p>
       <p>I've shipped design systems for a utility serving 500,000+ customers, led go-to-market visual strategy for an AI-powered SaaS platform, and built identities for founders who are done blending in. I bring <strong>institutional rigor to personal brands</strong> and street-level instinct to enterprise work.</p>
       <div class="plate rv">
         <div class="plate-h label"><span>Specifications</span><span>TDD / System 001</span></div>
         <dl>
           <dt>Origin</dt><dd>Philadelphia, PA</dd>
-          <dt>Education</dt><dd>Master's, Human Factors Psychology</dd>
+          <dt>Undergrad</dt><dd>Bachelor's, Multimedia Design</dd>
+          <dt>Graduate</dt><dd>Master's, Human Factors Psychology</dd>
           <dt>Years in service</dt><dd>12+</dd>
           <dt>Largest system shipped</dt><dd>500,000+ customers</dd>
           <dt>Operating mode</dt><dd>Strategy first</dd>
