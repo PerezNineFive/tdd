@@ -1,5 +1,18 @@
-<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
-<title>Tony Does Design</title>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tony Does Design | The future, by design.</title>
+<meta name="description" content="Tony Does Design is a Philadelphia brand identity and creative strategy studio. Strategy-first brand systems, logos and websites for scaling businesses.">
+<meta name="theme-color" content="#F1E5CC">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23171816'/%3E%3Cpath d='M16 3l3 10 10 3-10 3-3 10-3-10-10-3 10-3z' fill='%23D9432E'/%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Tony Does Design | The future, by design.">
+<meta property="og:description" content="Tony Does Design is a Philadelphia brand identity and creative strategy studio. Strategy-first brand systems, logos and websites for scaling businesses.">
+<meta property="og:image" content="https://tdd-ecru.vercel.app/og.jpg">
+<meta property="og:url" content="https://tdd-ecru.vercel.app/">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,400..900,0..100,0..1;1,9..144,400..900,0..100,0..1&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap">
@@ -26,7 +39,9 @@
 }
 *,*::before,*::after{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:var(--cream);color:var(--space);font-family:var(--f-body);font-size:17px;line-height:1.65;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+/* clip sideways overflow on both html and body: mobile browsers size the page to the widest element otherwise, which shoves everything left */
+html{overflow-x:hidden;overflow-x:clip}
+body{margin:0;background:var(--cream);color:var(--space);font-family:var(--f-body);font-size:17px;line-height:1.65;overflow-x:hidden;overflow-x:clip;-webkit-font-smoothing:antialiased;width:100%}
 a{color:inherit}
 img{max-width:100%}
 :focus-visible{outline:3px solid var(--gold);outline-offset:3px}
@@ -101,7 +116,7 @@ img{max-width:100%}
 .poster{position:relative;aspect-ratio:400/540;width:100%;max-width:500px;justify-self:end}
 .poster-bg{position:absolute;inset:0;overflow:hidden;background:var(--space)}
 /* tower layer: centered near the poster's left edge on desktop so the saucer crosses onto the page; on phones it rises above the poster's top edge */
-.tower-fx{position:absolute;bottom:0;left:30%;height:104%;aspect-ratio:300/540;translate:-50% 0;z-index:3;overflow:visible;pointer-events:none}
+.tower-fx{position:absolute;bottom:0;left:40%;height:104%;aspect-ratio:300/540;translate:-50% 0;z-index:3;overflow:visible;pointer-events:none}
 /* the poster is a bleed panel of the banner, not a framed card: it runs to the right edge and down into the black band,
    and its cream foreground plane melts into the page. A red orbit sweeps from the copy into the scene to tie them together. */
 .hero-orbit{display:none}
@@ -120,7 +135,7 @@ img{max-width:100%}
 }
 @media (max-width:1000px){
   .hero{padding-bottom:0}
-  .poster{max-width:none;width:auto;margin-inline:calc(var(--gut) * -1);margin-top:56px}
+  .poster{justify-self:stretch;max-width:none;width:auto;margin-inline:calc(var(--gut) * -1);margin-top:56px}
 }
 .poster-bg svg{position:absolute;inset:0;width:100%;height:100%}
 .poster-bg::after{content:"";position:absolute;inset:0;pointer-events:none;opacity:.16;mix-blend-mode:multiply;
@@ -330,6 +345,8 @@ footer ul a:hover{color:var(--gold)}
   .armed .rv:not(.in){transform:none}
 }
 </style>
+</head>
+<body>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <defs>
@@ -642,5 +659,5 @@ footer ul a:hover{color:var(--gold)}
   addEventListener('scroll', tick, {passive:true}); tick();
 })();
 </script>
-
-</body></html>
+</body>
+</html>
