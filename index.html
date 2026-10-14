@@ -3,15 +3,16 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Tony Does Design | The future, by design.</title>
+<title>Philadelphia Brand Identity Designer | Tony Does Design</title>
+<link rel="canonical" href="https://www.tonydoesdesign.com/">
 <meta name="description" content="Tony Does Design is a Philadelphia brand identity and creative strategy studio. Strategy-first brand systems, logos and websites for scaling businesses.">
 <meta name="theme-color" content="#F1E5CC">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23171816'/%3E%3Cpath d='M16 3l3 10 10 3-10 3-3 10-3-10-10-3 10-3z' fill='%23D9432E'/%3E%3C/svg%3E">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Tony Does Design | The future, by design.">
+<meta property="og:title" content="Philadelphia Brand Identity Designer | Tony Does Design">
 <meta property="og:description" content="Tony Does Design is a Philadelphia brand identity and creative strategy studio. Strategy-first brand systems, logos and websites for scaling businesses.">
-<meta property="og:image" content="https://tdd-ecru.vercel.app/og.jpg">
-<meta property="og:url" content="https://tdd-ecru.vercel.app/">
+<meta property="og:image" content="https://www.tonydoesdesign.com/og.jpg">
+<meta property="og:url" content="https://www.tonydoesdesign.com/">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -240,11 +241,16 @@ section.s{padding-block:clamp(84px,11vw,150px);position:relative}
 .pass-main{padding:22px 32px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px 40px;align-items:center}
 .pass-main h3{font-family:var(--f-display);font-variation-settings:"SOFT" 100;font-weight:800;font-size:clamp(24px,2.6vw,34px);margin:0;line-height:1}
 .pass-main .price{color:var(--space);margin:6px 0 0}
-.pass-main ul{list-style:none;margin:0;padding:0;columns:2;column-gap:24px;font-size:14px}
+.pass-main ul{list-style:none;margin:0;padding:0;columns:1;column-gap:24px;font-size:14px}
+@media (min-width:1280px){.pass-main ul{columns:2}}
 .pass-main li{padding:3px 0 3px 18px;position:relative;break-inside:avoid}
 .pass-main li::before{content:"";position:absolute;left:0;top:11px;width:7px;height:7px;border-radius:50%;background:var(--space)}
-.pass .btn{margin-right:30px;background:var(--space)}
+.pass-main p{margin:12px 0 0;font-size:14px;line-height:1.5;max-width:42ch}
+.pass-acts{margin-right:30px;display:grid;justify-items:start;gap:14px}
+.pass .btn{background:var(--space)}
 .pass .btn:hover{background:var(--cream);color:var(--space)}
+.pass .lnk{font-size:11px;color:var(--space)}
+.pass .lnk:hover{color:var(--red-ink)}
 .unsure{margin-top:44px;display:flex;flex-wrap:wrap;gap:12px 26px;align-items:center;color:var(--mist)}
 .unsure strong{font-family:var(--f-display);font-variation-settings:"SOFT" 100;font-style:italic;font-weight:600;font-size:24px;color:var(--cream)}
 
@@ -322,7 +328,7 @@ footer ul a:hover{color:var(--gold)}
   .pass{grid-template-columns:1fr}
   .pass-stub{border-right:0;border-bottom:2px dashed rgba(23,24,22,.5);grid-auto-flow:column;gap:14px;justify-content:start;align-items:baseline}
   .pass-main{grid-template-columns:1fr}
-  .pass .btn{margin:0 32px 28px;justify-self:start}
+  .pass-acts{margin:0 32px 28px}
   .cd-grid{grid-template-columns:1fr}
   .cd-rail{display:none}
   .caps ul{grid-template-columns:repeat(3,minmax(0,1fr));row-gap:36px}
@@ -548,14 +554,14 @@ footer ul a:hover{color:var(--gold)}
       </article>
     </div>
     <div class="pass rv">
-      <div class="pass-stub"><small class="label">Ongoing</small><b>Retainer</b></div>
+      <div class="pass-stub"><small class="label">Ongoing</small><b>NineFive</b></div>
       <div class="pass-main">
-        <div><h3>Creative Retainer</h3><div class="price">From $1,800 / month · rolling</div></div>
-        <ul><li>40 hours of design a month</li><li>Brand management</li><li>Social content and templates</li><li>Priority turnaround</li></ul>
+        <div><h3>Already have a brand?</h3><div class="price">NineFive Design Subscription · $997 / month</div><p>Ongoing design support from NineFive Design Co., the subscription studio. Submit requests, manage your queue and get deliverables without starting a new project every time.</p></div>
+        <ul><li>One active request at a time</li><li>A queue you prioritise</li><li>48-hour average turnaround</li><li>Social, campaign and sales assets</li><li>Larger work in agreed stages</li><li>Pause or cancel anytime</li></ul>
       </div>
-      <a class="btn" href="https://calendly.com/ninefive-design/coffee-w-tony" target="_blank" rel="noopener">Inquire <svg><use href="#arrow"/></svg></a>
+      <div class="pass-acts"><a class="btn" href="https://buy.stripe.com/bJedRaca65Ro1dDfIA4ow0p" target="_blank" rel="noopener">Subscribe <svg><use href="#arrow"/></svg></a><a class="lnk" href="https://ninefive-design-co.vercel.app/" target="_blank" rel="noopener">Explore NineFive Design Co.</a></div>
     </div>
-    <div class="unsure rv"><strong>Not sure which fits?</strong><span>Book a free 30-minute call and we'll work out what your brand needs.</span><a class="lnk" href="#contact">Get a ticket</a></div>
+    <div class="unsure rv"><strong>Not sure which fits?</strong><span>Starting or repositioning your brand? Choose a package above. Already branded and need ongoing work? NineFive. Still unsure? Book a free 30-minute call.</span><a class="lnk" href="#contact">Get a ticket</a></div>
   </div>
 </section>
 
