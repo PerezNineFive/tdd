@@ -15,7 +15,23 @@ Which to choose: starting or repositioning a brand → a Tony Does Design packag
 
 ## Ongoing design (NineFive Design Co.)
 
-- [NineFive Design Subscription](https://ninefive-design-co.vercel.app/): $997 per month. One active request at a time from a queue the client prioritises, 48-hour average turnaround per standard request, larger work delivered in agreed stages, pause or cancel anytime. Intended for businesses that already have a brand.
+- [NineFive Design Subscription](https://www.ninefivedesign.com/): $997 per month. One active request at a time from a queue the client prioritises, 48-hour average turnaround per standard request, larger work delivered in agreed stages, pause or cancel anytime. Intended for businesses that already have a brand.
+
+## Selected work
+
+- [Philadelphia Gas Works](https://www.tonydoesdesign.com/work/pgw-bill-redesign): UX · Service design. A utility bill 500,000+ customers can actually read.
+- [OrbitCoat Painting](https://www.tonydoesdesign.com/work/orbitcoat-painting): Brand identity. An atomic-age identity for a Florida painting company.
+- [Black Paranoia](https://www.tonydoesdesign.com/work/black-paranoia): Apparel · Collection design. Case File 3PK, a reflective streetwear drop from Baltimore.
+- [PS & Co.](https://www.tonydoesdesign.com/work/ps-and-co): Identity · Website. A botanical identity and online store for small-batch body care.
+
+## Live websites
+
+- [Kaiju Combat Sports](https://www.kaijucombatsports.com): Muay Thai, boxing and jiu-jitsu gym in South Philadelphia. Class schedule, coaches and trial-week booking.
+- [JNC Builders & Design](https://www.jncbuild.com): Philadelphia general contractor. Residential and commercial construction, remodeling and permit services.
+- [The Beauty Secrets](https://www.thebeautysecretsllc.com): Cosmetic studio in Philadelphia. Makeup, brows, lash lifts and permanent makeup with online booking.
+- [Trucking Hungry](https://www.truckinghungry.com): Microsite platform for food trucks: live location, menu, hours and tap-to-call for $25 a month.
+- [PS & Co.](https://ps-and-co.vercel.app): Online store for small-batch soaps, candles, body care and spa services, with cart and checkout.
+- [NineFive Design Co.](https://www.ninefivedesign.com/): Subscription design studio. Ongoing creative for brands that already exist.
 
 ## Contact
 

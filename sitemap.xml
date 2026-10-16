@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://www.tonydoesdesign.com/</loc>
-    <lastmod>2026-10-14</lastmod>
-  </url>
+  <url><loc>https://www.tonydoesdesign.com/</loc><lastmod>2026-10-16</lastmod></url>
+  <url><loc>https://www.tonydoesdesign.com/work</loc><lastmod>2026-10-16</lastmod></url>
+  <url><loc>https://www.tonydoesdesign.com/work/pgw-bill-redesign</loc><lastmod>2026-10-16</lastmod></url>
+  <url><loc>https://www.tonydoesdesign.com/work/orbitcoat-painting</loc><lastmod>2026-10-16</lastmod></url>
+  <url><loc>https://www.tonydoesdesign.com/work/black-paranoia</loc><lastmod>2026-10-16</lastmod></url>
+  <url><loc>https://www.tonydoesdesign.com/work/ps-and-co</loc><lastmod>2026-10-16</lastmod></url>
 </urlset>
