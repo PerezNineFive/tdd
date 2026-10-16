@@ -31,7 +31,7 @@ Which to choose: starting or repositioning a brand → a Tony Does Design packag
 - [The Beauty Secrets](https://www.thebeautysecretsllc.com): Cosmetic studio in Philadelphia. Makeup, brows, lash lifts and permanent makeup with online booking.
 - [Trucking Hungry](https://www.truckinghungry.com): Microsite platform for food trucks: live location, menu, hours and tap-to-call for $25 a month.
 - [PS & Co.](https://ps-and-co.vercel.app): Online store for small-batch soaps, candles, body care and spa services, with cart and checkout.
-- [Royal Striking MMA](https://royal-striking.vercel.app): Martial arts gym in Philadelphia. Muay Thai, jiu-jitsu, boxing and strength classes, a trial offer and a member portal.
+- [Royal Striking MMA](https://royalstriking.com): Martial arts gym in Philadelphia. Muay Thai, jiu-jitsu, boxing and strength classes, a trial offer and a member portal.
 - [NineFive Design Co.](https://www.ninefivedesign.com/): Subscription design studio. Ongoing creative for brands that already exist.
 
 ## Contact
