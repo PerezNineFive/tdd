@@ -19,6 +19,7 @@
   color-scheme:light;
 }
 *,*::before,*::after{box-sizing:border-box}
+[hidden]{display:none!important}
 html{scroll-behavior:smooth}
 /* clip sideways overflow on both html and body: mobile browsers size the page to the widest element otherwise, which shoves everything left */
 html{overflow-x:hidden;overflow-x:clip}
@@ -451,3 +452,9 @@ footer ul a:hover{color:var(--gold)}
   .site-list a{grid-template-columns:1fr;gap:6px}
 }
 @media (max-width:640px){.work-strip .work-grid{grid-template-columns:1fr}}
+
+/* before / after labels on case-study images */
+.bill-compare figure{position:relative}
+.ba-tag{position:absolute;top:12px;left:12px;z-index:1;background:var(--space);color:var(--cream);padding:6px 12px;border-radius:999px}
+.ba-tag.after{background:var(--red);color:var(--space)}
+.cs-body .bill-arch{margin:22px 0 0;max-width:560px}

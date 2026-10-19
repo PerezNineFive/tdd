@@ -28,7 +28,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,400..900,0..100,0..1;1,9..144,400..900,0..100,0..1&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap">
-<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/site.css?v=abeac4f5">
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -85,6 +85,66 @@
    "@type": "CreativeWork",
    "name": "PS & Co.",
    "url": "https://www.tonydoesdesign.com/work/ps-and-co"
+  }
+ ]
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "CollectionPage",
+ "name": "Work | Tony Does Design",
+ "url": "https://www.tonydoesdesign.com/work/",
+ "hasPart": [
+  {
+   "@type": "CreativeWork",
+   "name": "Philadelphia Gas Works",
+   "url": "https://www.tonydoesdesign.com/work/pgw-bill-redesign/"
+  },
+  {
+   "@type": "CreativeWork",
+   "name": "OrbitCoat Painting",
+   "url": "https://www.tonydoesdesign.com/work/orbitcoat-painting/"
+  },
+  {
+   "@type": "CreativeWork",
+   "name": "Black Paranoia",
+   "url": "https://www.tonydoesdesign.com/work/black-paranoia/"
+  },
+  {
+   "@type": "CreativeWork",
+   "name": "PS & Co.",
+   "url": "https://www.tonydoesdesign.com/work/ps-and-co/"
+  }
+ ]
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "CollectionPage",
+ "name": "Work | Tony Does Design",
+ "url": "https://www.tonydoesdesign.com/work/",
+ "hasPart": [
+  {
+   "@type": "CreativeWork",
+   "name": "Philadelphia Gas Works",
+   "url": "https://www.tonydoesdesign.com/work/pgw-bill-redesign/"
+  },
+  {
+   "@type": "CreativeWork",
+   "name": "OrbitCoat Painting",
+   "url": "https://www.tonydoesdesign.com/work/orbitcoat-painting/"
+  },
+  {
+   "@type": "CreativeWork",
+   "name": "Black Paranoia",
+   "url": "https://www.tonydoesdesign.com/work/black-paranoia/"
+  },
+  {
+   "@type": "CreativeWork",
+   "name": "PS & Co.",
+   "url": "https://www.tonydoesdesign.com/work/ps-and-co/"
   }
  ]
 }
@@ -202,7 +262,7 @@
     <dl class="cs-facts">
       <div><dt>Client</dt><dd>Philadelphia Gas Works</dd></div>
       <div><dt>Role</dt><dd>Senior UX Designer</dd></div>
-      <div><dt>Scope</dt><dd>Bill, digital, comms, self-service</dd></div>
+      <div><dt>Scope</dt><dd>Print and digital bill, PUC and ADA compliant</dd></div>
       <div><dt>Started</dt><dd>February 2019</dd></div>
     </dl>
   </div>
@@ -217,6 +277,7 @@
   <section class="cs-body"><h2>The challenge</h2><div>
     <p>PGW is the city-owned utility that heats Philadelphia. Confusing bills, unreliable online payments and poor communication had worn down trust in every customer group, from low-income households to owners managing several business accounts.</p>
     <p>That showed up as long call-center waits, public complaints on social media, late payments and customers who never found the assistance programs built for them. One business customer called PGW "the Comcast of gas."</p>
+    <p>Every change also had to hold up to regulation. The bill had to stay compliant with Pennsylvania Public Utility Commission (PUC) billing requirements and meet ADA accessibility standards in both formats customers use: the printed bill that arrives in the mail and the digital version viewed online.</p>
   </div></section>
   <section class="cs-body"><h2>Research</h2><div>
     <p>I led a multi-method research program: social media listening to capture unfiltered complaints, three moderated focus groups with 24 participants, a review of billing practices at peer utilities, and interviews with customer service, marketing, legal and finance.</p>
@@ -238,12 +299,17 @@
     </ul>
   </div></section>
   <section class="cs-body"><h2>The redesign</h2><div>
-    <p>The bill became one modular system: the same core layout for everyone, with a segment-specific module that swaps in assistance programs, budget billing or multi-account tools. The amount due is set at 48pt, body text never drops below 12pt, contrast meets WCAG AA, and every payment option is marked <b>NO FEE</b>.</p>
+    <p>The bill became one modular system: the same core layout for everyone, with a segment-specific module that swaps in assistance programs, budget billing or multi-account tools. The amount due is set at 48pt, body text never drops below 12pt, contrast meets WCAG AA in print and on screen, and free payment methods are labeled <b>NO FEE</b>.</p>
   </div></section>
   <div class="bill-compare">
-    <figure><img src="before-standard-bill.jpg" width="1400" height="1812" loading="lazy" alt="PGW's 2016 standard bill sample: dense text, small amount due and annotated callouts">
-      <figcaption>Before: PGW's published standard bill sample. Dense text, no hierarchy and the amount due set no larger than the fine print.</figcaption></figure>
-    <figure class="bill-arch" aria-label="After: redesigned modular bill architecture">
+    <figure><span class="ba-tag label">Before · 2016</span><img src="before-standard-bill.jpg" width="1400" height="1812" loading="lazy" alt="PGW's 2016 standard bill sample: dense text, small amount due, charges in fine print">
+      <figcaption>PGW's 2016 standard bill. Dense text, no clear hierarchy, and the amount due set no larger than the fine print.</figcaption></figure>
+    <figure><span class="ba-tag label after">After · 2023</span><img src="after-2023-bill.jpg" width="1275" height="1650" loading="lazy" alt="PGW's redesigned 2023 standard bill sample: personal greeting, large Please Pay and Due By box, six-month energy usage chart and a message center promoting assistance programs">
+      <figcaption>The redesigned bill as PGW published it in its 2023 standard bill sample. A personal greeting, a large Please Pay box, a six-month usage snapshot, and assistance programs at the top of the message center.</figcaption></figure>
+  </div>
+  <section class="cs-body"><h2>How the new bill is organized</h2><div>
+    <p>One core layout serves all three customer segments. The most important information comes first, and the details are there for anyone who wants them.</p>
+    <figure class="bill-arch" aria-label="Modular bill architecture">
       <ol>
         <li><span class="mono">01</span><b>Header</b><small>Logo, account number, name and address</small></li>
         <li class="due"><span class="mono">02</span><b>Amount due</b><small>48pt total, due date with color-coded urgency, payment status</small></li>
@@ -252,9 +318,8 @@
         <li class="fold"><span class="mono">05</span><b>Usage (collapsible)</b><small>Chart, temperature comparison and tips on demand</small></li>
         <li class="seg"><span class="mono">06</span><b>Segment module</b><small>Assistance programs · budget billing · multi-account</small></li>
       </ol>
-      <figcaption>After: the modular bill architecture, one core layout serving three segments.</figcaption>
     </figure>
-  </div>
+  </div></section>
   <section class="cs-body"><h2>Rollout</h2><div>
     <ol class="cs-phases">
       <li><b>Bill redesign.</b> Modular layout, clear hierarchy, segment modules and NO FEE messaging.</li>
@@ -290,6 +355,6 @@
   <ul class="label"><li><a href="../../work/">Work</a></li><li><a href="../../#about">About</a></li><li><a href="../../#services">Services</a></li><li><a href="../../#process">Process</a></li><li><a href="../../#contact">Contact</a></li></ul>
   <div class="f-r mono"><a href="https://instagram.com/officially.tonydoes" target="_blank" rel="noopener">@officially.tonydoes</a><br>© 2026 Tony Does Design · Philadelphia</div>
 </footer>
-<script src="../../assets/site.js" defer></script>
+<script src="../../assets/site.js?v=e6f012c3" defer></script>
 </body>
 </html>
