@@ -458,3 +458,13 @@ footer ul a:hover{color:var(--gold)}
 .ba-tag{position:absolute;top:12px;left:12px;z-index:1;background:var(--space);color:var(--cream);padding:6px 12px;border-radius:999px}
 .ba-tag.after{background:var(--red);color:var(--space)}
 .cs-body .bill-arch{margin:22px 0 0;max-width:560px}
+
+/* work filters: visible state, result line, entrance */
+.filter{transition:background .2s,color .2s,transform .3s var(--spring);min-height:44px;padding:10px 18px}
+.filter:hover{transform:translateY(-2px);background:var(--cream-2)}
+.filter[aria-pressed="true"]:hover{background:var(--space)}
+.filter-status{margin:-18px 0 26px;color:var(--ink-soft);min-height:1.5em}
+.work-card.pop{animation:cardIn .55s var(--ease) both}
+@keyframes cardIn{from{opacity:0;transform:translateY(16px)}}
+.sites{scroll-margin-top:96px}
+@media (prefers-reduced-motion:reduce){.work-card.pop{animation:none}}

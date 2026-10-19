@@ -28,7 +28,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,400..900,0..100,0..1;1,9..144,400..900,0..100,0..1&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap">
-<link rel="stylesheet" href="../assets/site.css?v=abeac4f5">
+<link rel="stylesheet" href="../assets/site.css?v=62676d5e">
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -85,6 +85,66 @@
    "@type": "CreativeWork",
    "name": "PS & Co.",
    "url": "https://www.tonydoesdesign.com/work/ps-and-co"
+  }
+ ]
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "CollectionPage",
+ "name": "Work | Tony Does Design",
+ "url": "https://www.tonydoesdesign.com/work/",
+ "hasPart": [
+  {
+   "@type": "CreativeWork",
+   "name": "Philadelphia Gas Works",
+   "url": "https://www.tonydoesdesign.com/work/pgw-bill-redesign/"
+  },
+  {
+   "@type": "CreativeWork",
+   "name": "OrbitCoat Painting",
+   "url": "https://www.tonydoesdesign.com/work/orbitcoat-painting/"
+  },
+  {
+   "@type": "CreativeWork",
+   "name": "Black Paranoia",
+   "url": "https://www.tonydoesdesign.com/work/black-paranoia/"
+  },
+  {
+   "@type": "CreativeWork",
+   "name": "PS & Co.",
+   "url": "https://www.tonydoesdesign.com/work/ps-and-co/"
+  }
+ ]
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "CollectionPage",
+ "name": "Work | Tony Does Design",
+ "url": "https://www.tonydoesdesign.com/work/",
+ "hasPart": [
+  {
+   "@type": "CreativeWork",
+   "name": "Philadelphia Gas Works",
+   "url": "https://www.tonydoesdesign.com/work/pgw-bill-redesign/"
+  },
+  {
+   "@type": "CreativeWork",
+   "name": "OrbitCoat Painting",
+   "url": "https://www.tonydoesdesign.com/work/orbitcoat-painting/"
+  },
+  {
+   "@type": "CreativeWork",
+   "name": "Black Paranoia",
+   "url": "https://www.tonydoesdesign.com/work/black-paranoia/"
+  },
+  {
+   "@type": "CreativeWork",
+   "name": "PS & Co.",
+   "url": "https://www.tonydoesdesign.com/work/ps-and-co/"
   }
  ]
 }
@@ -279,13 +339,14 @@
 </header>
 <section class="s" style="padding-top:0">
   <div class="wrap">
-    <div class="filters" role="group" aria-label="Filter projects">
-      <button class="filter" data-filter="all" aria-pressed="true">All</button>
-      <button class="filter" data-filter="identity" aria-pressed="false">Brand identity</button>
-      <button class="filter" data-filter="website" aria-pressed="false">Websites</button>
-      <button class="filter" data-filter="ux" aria-pressed="false">UX · Service design</button>
+    <div class="filters" role="group" aria-label="Filter work by type">
+      <button type="button" class="filter" data-filter="all" data-hash="" aria-pressed="true" aria-controls="work-results websites">All</button>
+      <button type="button" class="filter" data-filter="identity" data-hash="brand-identity" aria-pressed="false" aria-controls="work-results websites">Brand identity</button>
+      <button type="button" class="filter" data-filter="website" data-hash="websites" aria-pressed="false" aria-controls="work-results websites">Websites</button>
+      <button type="button" class="filter" data-filter="ux" data-hash="ux" aria-pressed="false" aria-controls="work-results websites">UX · Service design</button>
     </div>
-    <div class="work-grid">
+    <p class="filter-status mono" id="work-status" role="status" aria-live="polite">Showing all 4 projects and 7 live websites</p>
+    <div class="work-grid" id="work-results">
 <a class="work-card" href="pgw-bill-redesign/" data-type="ux">
   <div class="thumb"><img src="pgw-bill-redesign/card.jpg" width="1200" height="900" loading="lazy" alt="Philadelphia Gas Works redesigned bill with a large Please Pay box and energy usage chart"></div>
   <div class="meta-row label"><span>UX · Service design</span><span>2019</span></div>
@@ -313,20 +374,20 @@
     </div>
   </div>
 </section>
-<section class="s dark sites" id="websites">
+<section class="s dark sites" id="websites" data-filter-section="website">
   <div class="wrap">
     <div class="sec-head">
       <div><span class="eyebrow label">Live websites</span><h2 class="h">Sites we've <em>built and launched.</em></h2></div>
       <p>Designed and built for small businesses, mostly here in Philadelphia. Each one is live, so go click around.</p>
     </div>
     <ul class="site-list">
-      <li><a href="https://www.kaijucombatsports.com" target="_blank" rel="noopener"><span class="site-name">Kaiju Combat Sports</span><span class="site-what">Muay Thai, boxing and jiu-jitsu gym in South Philadelphia. Class schedule, coaches and trial-week booking.</span><span class="site-host mono">kaijucombatsports.com <svg aria-hidden="true"><use href="#arrow"/></svg></span></a></li>
-      <li><a href="https://www.jncbuild.com" target="_blank" rel="noopener"><span class="site-name">JNC Builders & Design</span><span class="site-what">Philadelphia general contractor. Residential and commercial construction, remodeling and permit services.</span><span class="site-host mono">jncbuild.com <svg aria-hidden="true"><use href="#arrow"/></svg></span></a></li>
-      <li><a href="https://www.thebeautysecretsllc.com" target="_blank" rel="noopener"><span class="site-name">The Beauty Secrets</span><span class="site-what">Cosmetic studio in Philadelphia. Makeup, brows, lash lifts and permanent makeup with online booking.</span><span class="site-host mono">thebeautysecretsllc.com <svg aria-hidden="true"><use href="#arrow"/></svg></span></a></li>
-      <li><a href="https://www.truckinghungry.com" target="_blank" rel="noopener"><span class="site-name">Trucking Hungry</span><span class="site-what">Microsite platform for food trucks: live location, menu, hours and tap-to-call for $25 a month.</span><span class="site-host mono">truckinghungry.com <svg aria-hidden="true"><use href="#arrow"/></svg></span></a></li>
-      <li><a href="https://ps-and-co.vercel.app" target="_blank" rel="noopener"><span class="site-name">PS & Co.</span><span class="site-what">Online store for small-batch soaps, candles, body care and spa services, with cart and checkout.</span><span class="site-host mono">ps-and-co.vercel.app <svg aria-hidden="true"><use href="#arrow"/></svg></span></a></li>
-      <li><a href="https://royalstriking.com" target="_blank" rel="noopener"><span class="site-name">Royal Striking MMA</span><span class="site-what">Martial arts gym in Philadelphia. Muay Thai, jiu-jitsu, boxing and strength classes, a trial offer and a member portal.</span><span class="site-host mono">royalstriking.com <svg aria-hidden="true"><use href="#arrow"/></svg></span></a></li>
-      <li><a href="https://www.ninefivedesign.com/" target="_blank" rel="noopener"><span class="site-name">NineFive Design Co.</span><span class="site-what">Subscription design studio. Ongoing creative for brands that already exist.</span><span class="site-host mono">ninefivedesign.com <svg aria-hidden="true"><use href="#arrow"/></svg></span></a></li>
+      <li data-type="website"><a href="https://www.kaijucombatsports.com" target="_blank" rel="noopener"><span class="site-name">Kaiju Combat Sports</span><span class="site-what">Muay Thai, boxing and jiu-jitsu gym in South Philadelphia. Class schedule, coaches and trial-week booking.</span><span class="site-host mono">kaijucombatsports.com <svg aria-hidden="true"><use href="#arrow"/></svg></span></a></li>
+      <li data-type="website"><a href="https://www.jncbuild.com" target="_blank" rel="noopener"><span class="site-name">JNC Builders & Design</span><span class="site-what">Philadelphia general contractor. Residential and commercial construction, remodeling and permit services.</span><span class="site-host mono">jncbuild.com <svg aria-hidden="true"><use href="#arrow"/></svg></span></a></li>
+      <li data-type="website"><a href="https://www.thebeautysecretsllc.com" target="_blank" rel="noopener"><span class="site-name">The Beauty Secrets</span><span class="site-what">Cosmetic studio in Philadelphia. Makeup, brows, lash lifts and permanent makeup with online booking.</span><span class="site-host mono">thebeautysecretsllc.com <svg aria-hidden="true"><use href="#arrow"/></svg></span></a></li>
+      <li data-type="website"><a href="https://www.truckinghungry.com" target="_blank" rel="noopener"><span class="site-name">Trucking Hungry</span><span class="site-what">Microsite platform for food trucks: live location, menu, hours and tap-to-call for $25 a month.</span><span class="site-host mono">truckinghungry.com <svg aria-hidden="true"><use href="#arrow"/></svg></span></a></li>
+      <li data-type="website"><a href="https://ps-and-co.vercel.app" target="_blank" rel="noopener"><span class="site-name">PS & Co.</span><span class="site-what">Online store for small-batch soaps, candles, body care and spa services, with cart and checkout.</span><span class="site-host mono">ps-and-co.vercel.app <svg aria-hidden="true"><use href="#arrow"/></svg></span></a></li>
+      <li data-type="website"><a href="https://royalstriking.com" target="_blank" rel="noopener"><span class="site-name">Royal Striking MMA</span><span class="site-what">Martial arts gym in Philadelphia. Muay Thai, jiu-jitsu, boxing and strength classes, a trial offer and a member portal.</span><span class="site-host mono">royalstriking.com <svg aria-hidden="true"><use href="#arrow"/></svg></span></a></li>
+      <li data-type="website"><a href="https://www.ninefivedesign.com/" target="_blank" rel="noopener"><span class="site-name">NineFive Design Co.</span><span class="site-what">Subscription design studio. Ongoing creative for brands that already exist.</span><span class="site-host mono">ninefivedesign.com <svg aria-hidden="true"><use href="#arrow"/></svg></span></a></li>
     </ul>
   </div>
 </section>
@@ -343,6 +404,6 @@
   <ul class="label"><li><a href="../work/">Work</a></li><li><a href="../#about">About</a></li><li><a href="../#services">Services</a></li><li><a href="../#process">Process</a></li><li><a href="../#contact">Contact</a></li></ul>
   <div class="f-r mono"><a href="https://instagram.com/officially.tonydoes" target="_blank" rel="noopener">@officially.tonydoes</a><br>© 2026 Tony Does Design · Philadelphia</div>
 </footer>
-<script src="../assets/site.js?v=e6f012c3" defer></script>
+<script src="../assets/site.js?v=6d8ab54a" defer></script>
 </body>
 </html>

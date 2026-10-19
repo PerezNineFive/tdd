@@ -24,11 +24,48 @@
     addEventListener('scroll', tick, {passive:true}); tick();
   }
 
-  // work filters: show cards whose data-type matches
-  const filters = document.querySelectorAll('.filter[data-filter]');
-  filters.forEach(btn => btn.addEventListener('click', () => {
-    filters.forEach(b => b.setAttribute('aria-pressed', String(b === btn)));
-    const f = btn.dataset.filter;
-    document.querySelectorAll('.work-card[data-type]').forEach(c => { c.hidden = f !== 'all' && !c.dataset.type.split(' ').includes(f); });
-  }));
+  // work filters: filter case studies and the live-websites list together,
+  // report the result, keep the choice in the URL (#websites, #brand-identity, #ux)
+  const filters = [...document.querySelectorAll('.filter[data-filter]')];
+  if (filters.length) {
+    const cards = [...document.querySelectorAll('.work-card[data-type]')];
+    const sites = [...document.querySelectorAll('.site-list [data-type]')];
+    const sitesSection = document.querySelector('[data-filter-section="website"]');
+    const status = document.getElementById('work-status');
+    const results = document.getElementById('work-results');
+    const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const plural = (n, one, many) => `${n} ${n === 1 ? one : many}`;
+    const apply = (btn, {scroll = false, updateUrl = true} = {}) => {
+      const f = btn.dataset.filter;
+      filters.forEach(b => b.setAttribute('aria-pressed', String(b === btn)));
+      let shown = 0;
+      cards.forEach(c => {
+        const on = f === 'all' || c.dataset.type.split(' ').includes(f);
+        c.hidden = !on;
+        if (on) { shown++; c.classList.remove('pop'); void c.offsetWidth; c.classList.add('pop'); }
+      });
+      const showSites = f === 'all' || f === 'website';
+      if (sitesSection) sitesSection.hidden = !showSites;
+      const siteCount = showSites ? sites.length : 0;
+      if (results) results.hidden = shown === 0;
+      if (status) {
+        const label = f === 'all' ? 'all ' : '';
+        const parts = [shown ? `${label}${plural(shown, 'project', 'projects')}` : '', siteCount ? plural(siteCount, 'live website', 'live websites') : ''].filter(Boolean);
+        status.textContent = 'Showing ' + parts.join(' and ');
+      }
+      if (updateUrl) history.replaceState(null, '', btn.dataset.hash ? '#' + btn.dataset.hash : location.pathname);
+      if (scroll) {
+        const target = f === 'website' && sitesSection ? sitesSection : status;
+        const top = target.getBoundingClientRect().top + scrollY - 96;
+        if (Math.abs(top - scrollY) > 40) scrollTo({top, behavior: reduce ? 'auto' : 'smooth'});
+      }
+    };
+    filters.forEach(btn => btn.addEventListener('click', () => apply(btn, {scroll: true})));
+    const fromHash = () => {
+      const h = location.hash.slice(1);
+      const btn = filters.find(b => b.dataset.hash && b.dataset.hash === h);
+      if (btn) apply(btn, {scroll: h === 'websites', updateUrl: false});
+    };
+    fromHash(); addEventListener('hashchange', fromHash);
+  }
 })();
