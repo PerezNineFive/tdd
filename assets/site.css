@@ -468,3 +468,26 @@ footer ul a:hover{color:var(--gold)}
 @keyframes cardIn{from{opacity:0;transform:translateY(16px)}}
 .sites{scroll-margin-top:96px}
 @media (prefers-reduced-motion:reduce){.work-card.pop{animation:none}}
+
+/* animated atom in page headers */
+.page-head .atom{position:absolute;right:max(var(--gut),4vw);top:110px;width:min(300px,24vw);height:auto;color:var(--red);pointer-events:none;overflow:visible}
+.atom-spin{transform-origin:160px 160px;animation:spin 48s linear infinite}
+.atom .e1{fill:var(--gold)}.atom .e2{fill:var(--jet)}.atom .e3{fill:var(--space)}
+.atom .nucleus{fill:var(--space);transform-box:fill-box;transform-origin:center;animation:tw 3.2s ease-in-out infinite}
+@media (min-width:901px){.page-head .atom ~ .wrap h1,.page-head .atom ~ .wrap .lede{max-width:min(16ch,62%)}.page-head .atom ~ .wrap .lede{max-width:min(56ch,62%)}}
+@media (max-width:900px){.page-head .atom{display:none}}
+@media (prefers-reduced-motion:reduce){.atom .e{display:none}}
+
+/* featured case study spans the grid */
+.work-grid .work-card.featured{grid-column:1/-1;display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr)}
+.work-card.featured .thumb{border-bottom:0;border-right:1.5px solid var(--space);aspect-ratio:4/3}
+.work-card.featured .card-text{display:flex;flex-direction:column;justify-content:center;padding:clamp(12px,2.5vw,36px) 0}
+.work-card.featured h2{font-size:clamp(30px,3.2vw,46px)}
+.work-card.featured p{font-size:17px;max-width:40ch}
+@media (max-width:760px){.work-grid .work-card.featured{display:flex}.work-card.featured .thumb{border-right:0;border-bottom:1.5px solid var(--space)}.work-card.featured .card-text{padding:0}}
+
+/* closing call to action, on the same grid as section headers */
+.work-cta{border-top:1px solid var(--cream-line)}
+.cta-head{margin-bottom:0;align-items:center}
+.cta-side{display:grid;gap:22px;justify-items:start}
+.cta-side p{margin:0;color:var(--ink-soft);max-width:44ch}
