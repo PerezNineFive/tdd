@@ -42,7 +42,10 @@
     $("dial-prev").disabled = page === 0;
     $("dial-next").disabled = (page + 1) * 10 >= keys.length;
     $("dial-range").textContent = list.length ? dayFmt(list[0], { month: "short", day: "numeric" }) + " – " + dayFmt(list[list.length - 1], { month: "short", day: "numeric" }) : "";
-    $("dial-month").textContent = list.length ? dayFmt(list[0], { month: "short" }) : "";
+    // the center card follows the selected day; otherwise it shows the month the dial opens on
+    var shown = day && list.indexOf(day) > -1 ? day : null;
+    $("dial-month").textContent = shown ? dayFmt(shown, { month: "short" }) : list.length ? dayFmt(list[0], { month: "short" }) : "";
+    $("dial-card-day").textContent = shown ? dayFmt(shown, { day: "numeric" }) : "TDD";
   }
 
   function onHole(e) {
@@ -69,7 +72,6 @@
     if (Math.floor(idx / 10) !== page) { page = Math.floor(idx / 10); }
     renderDial();
     $("day-title").textContent = dayFmt(k, { weekday: "long", month: "long", day: "numeric" });
-    $("dial-card-day").textContent = dayFmt(k, { day: "numeric" });
     slotsEl.innerHTML = "";
     days[k].forEach(function (iso) {
       var s = document.createElement("button");
