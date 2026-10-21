@@ -96,7 +96,7 @@
   function load() {
     root.dataset.state = "loading";
     var s = new Date(), e = new Date(s.getTime() + 62 * 864e5);
-    return fetch("/api/slots?start=" + ymd(s) + "&end=" + ymd(e) + "&timeZone=" + encodeURIComponent(tz))
+    return fetch("/api/slots/?start=" + ymd(s) + "&end=" + ymd(e) + "&timeZone=" + encodeURIComponent(tz))
       .then(function (r) { if (!r.ok) throw r; return r.json(); })
       .then(function (j) {
         days = {}; keys = [];
@@ -124,7 +124,7 @@
     var btn = form.querySelector("button[type=submit]");
     btn.disabled = true; btn.classList.add("dialing");
     $("err").textContent = "";
-    fetch("/api/book", {
+    fetch("/api/book/", {
       method: "POST", headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ start: slot, timeZone: tz, name: $("f-name").value, email: $("f-email").value, notes: $("f-notes").value, company: $("f-company").value })
     })
