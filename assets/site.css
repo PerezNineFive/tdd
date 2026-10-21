@@ -491,3 +491,75 @@ footer ul a:hover{color:var(--gold)}
 .cta-head{margin-bottom:0;align-items:center}
 .cta-side{display:grid;gap:22px;justify-items:start}
 .cta-side p{margin:0;color:var(--ink-soft);max-width:44ch}
+
+/* ---------------------------------------------------------------- /book: rotary phone booking */
+.book-head .lede{max-width:560px}
+.book-sec{padding-top:clamp(8px,2vw,24px)}
+.booker{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,5vw,72px);align-items:start}
+.phone{position:relative;width:100%;max-width:520px;margin:0 auto;aspect-ratio:460/470;color:var(--space)}
+.phone-body{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.phone-body .shell{fill:var(--red);stroke:var(--space);stroke-width:3;stroke-linejoin:round}
+.phone-body .shine{fill:#fff;opacity:.16}
+.phone-body .prong{fill:var(--red-ink);stroke:var(--space);stroke-width:3}
+.handset{transform-origin:230px 80px;transition:transform .5s var(--spring)}
+.booker:not([data-state=loading]):not([data-state=ready]) .handset{transform:translateY(-14px) rotate(-3deg)}
+.dial{position:absolute;left:17.83%;top:30.64%;width:64.35%;aspect-ratio:1;border-radius:50%;background:var(--cream);border:3px solid var(--space);box-shadow:inset 0 0 0 10px var(--cream-2),inset 0 0 0 12px var(--cream-line)}
+.dial-wheel{position:absolute;inset:0;border-radius:50%}
+.hole{position:absolute;width:21%;aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;border:2.5px solid var(--space);background:#fbf5e8;color:var(--space);font:600 clamp(13px,1.5vw,18px)/1 var(--f-sub);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;cursor:pointer;padding:0;transition:background .2s,color .2s,transform .2s var(--spring)}
+.hole small{font:500 clamp(8px,.75vw,10px)/1 var(--f-mono);letter-spacing:.06em;text-transform:uppercase}
+.hole:hover:not(:disabled){background:var(--gold);transform:translate(-50%,-50%) scale(1.06)}
+.hole[aria-pressed=true]{background:var(--red);color:var(--cream)}
+.hole:disabled{cursor:default;opacity:.35}
+.hole:focus-visible{outline:3px solid var(--jet);outline-offset:3px}
+.dial-card{position:absolute;left:50%;top:50%;width:34%;aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;background:#fff;border:2.5px solid var(--space);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:2px}
+.dial-card strong{font:600 clamp(22px,3vw,40px)/1 var(--f-display);color:var(--red)}
+.dial-card .label{font-size:clamp(7px,.7vw,9px)}
+.dial-stop{position:absolute;right:4%;bottom:14%;width:14%;height:5%;background:var(--gold);border:2.5px solid var(--space);border-radius:4px;transform:rotate(-20deg)}
+.phone.ringing{animation:ring .14s linear 10 alternate}
+.phone.ringing .handset{animation:jump .28s ease-in-out 5 alternate}
+@keyframes ring{from{transform:rotate(-2.2deg)}to{transform:rotate(2.2deg)}}
+@keyframes jump{from{transform:translateY(-14px) rotate(-3deg)}to{transform:translateY(-34px) rotate(3deg)}}
+
+.board{background:var(--space);color:var(--cream);border-radius:18px;padding:clamp(20px,3vw,36px);display:grid;gap:14px;box-shadow:8px 8px 0 var(--red)}
+.board a{color:var(--gold)}
+.board-top{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;color:var(--ti);border-bottom:1px solid var(--space-line);padding-bottom:12px}
+.board-top b{color:var(--cream);font-weight:500}
+.dial-nav{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.dial-nav button{background:none;border:1.5px solid var(--space-line);color:var(--cream);border-radius:999px;padding:8px 14px;font:inherit;cursor:pointer}
+.dial-nav button:hover:not(:disabled){border-color:var(--gold);color:var(--gold)}
+.dial-nav button:disabled{opacity:.3;cursor:default}
+.day-pick{color:var(--ti);margin-top:4px}
+.board select,.book-form input,.book-form textarea{width:100%;background:var(--space-2);color:var(--cream);border:1.5px solid var(--space-line);border-radius:10px;padding:12px 14px;font:400 16px/1.4 var(--f-body)}
+.board select:focus,.book-form input:focus,.book-form textarea:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(217,154,59,.25)}
+.day-title{font:500 clamp(20px,2.2vw,26px)/1.2 var(--f-display);margin:8px 0 10px}
+.slots{display:grid;grid-template-columns:repeat(auto-fill,minmax(96px,1fr));gap:8px}
+.slot{background:none;border:1.5px solid var(--cream-line);color:var(--cream);border-radius:999px;padding:11px 8px;font:500 14px/1 var(--f-mono);cursor:pointer;transition:background .15s,color .15s,border-color .15s}
+.slot:hover{border-color:var(--gold);color:var(--gold)}
+.slot[aria-pressed=true]{background:var(--red);border-color:var(--red);color:var(--cream)}
+.book-form{display:grid;gap:8px;border-top:1px solid var(--space-line);padding-top:16px;margin-top:6px}
+.book-form .label{color:var(--ti);margin-top:6px}
+.book-form .label i{text-transform:none;font-style:normal;opacity:.7}
+.chosen{display:grid;gap:4px;margin:0 0 4px}
+.chosen strong{font:500 18px/1.3 var(--f-sub);color:var(--gold)}
+.book-form .btn{justify-self:start;margin-top:10px}
+.book-form .btn.dialing{opacity:.6;pointer-events:none}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.err{color:#ff8a76;margin:0;min-height:1em}
+.board-msg{display:none;margin:0}
+.booker[data-state=loading] .msg-loading,.booker[data-state=error] .msg-error,.booker[data-state=empty] .msg-empty{display:block}
+.booker[data-state=loading] .pick,.booker[data-state=error] .pick,.booker[data-state=empty] .pick,.booker[data-state=error] .dial-nav,.booker[data-state=empty] .dial-nav,.booker[data-state=error] #day-select,.booker[data-state=error] .day-pick,.booker[data-state=empty] #day-select,.booker[data-state=empty] .day-pick{display:none}
+.connected{display:none;outline:none}
+.booker[data-state=done] .connected{display:grid;gap:10px}
+.booker[data-state=done] .pick,.booker[data-state=done] .book-form,.booker[data-state=done] .dial-nav,.booker[data-state=done] #day-select,.booker[data-state=done] .day-pick{display:none}
+.connected .h{font-size:clamp(30px,3.6vw,44px);margin:0}
+.connected .lnk{background:none;border:0;color:var(--gold);padding:0;font:inherit;cursor:pointer;justify-self:start;text-decoration:underline}
+@media (max-width:899px){
+  .booker{grid-template-columns:1fr}
+  .phone{max-width:440px}
+  .hole{font-size:15px}
+  .hole small{font-size:8px}
+  .dial-card .label{font-size:7px}
+}
+@media (prefers-reduced-motion:reduce){.phone.ringing,.phone.ringing .handset{animation:none}.handset{transition:none}}
+.book-head{padding-bottom:0}
+.book-form,.connected{scroll-margin-top:110px}
