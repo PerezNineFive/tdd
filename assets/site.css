@@ -384,8 +384,8 @@ footer ul a:hover{color:var(--gold)}
 .cs-facts div{padding:16px 18px 16px 0}
 .cs-facts dt{font-family:var(--f-sub);font-weight:700;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-soft)}
 .cs-facts dd{margin:4px 0 0;font-family:var(--f-mono);font-size:14px}
-.cs-hero-img{margin:0;background:var(--space)}
-.cs-hero-img img{display:block;width:100%;height:auto}
+.cs-hero-img{margin:0 0 clamp(8px,2vw,24px);padding:clamp(16px,3.5vw,48px);background:var(--cream-2);border:1.5px solid var(--space);display:flex;justify-content:center;align-items:center}
+.cs-hero-img img{display:block;width:auto;max-width:100%;height:auto;max-height:min(72vh,720px);object-fit:contain}
 .cs-body{display:grid;grid-template-columns:minmax(0,260px) minmax(0,1fr);gap:clamp(24px,5vw,80px);padding-block:clamp(56px,8vw,110px);border-bottom:1px solid var(--cream-line)}
 .cs-body h2{font-family:var(--f-display);font-variation-settings:"SOFT" 100;font-weight:800;font-size:clamp(26px,2.6vw,36px);line-height:1.05;margin:0}
 .cs-body p{margin:0 0 16px;max-width:64ch;color:var(--ink-soft)}
