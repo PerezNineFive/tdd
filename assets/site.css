@@ -641,3 +641,4 @@ footer ul a:hover{color:var(--gold)}
   .art-author{grid-template-columns:64px minmax(0,1fr)}
   .art-author img{width:64px}
 }
+.plate dd a{color:inherit;text-decoration:underline;text-underline-offset:3px}
